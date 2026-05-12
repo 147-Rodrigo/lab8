@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Iterator;
 
 public class ClassGroup {
 
@@ -23,6 +24,18 @@ public class ClassGroup {
 
     public String getName() {
         return name;
+    }
+
+    public void removeByEnrollments(int x) {
+        Iterator<Student> iterator = students.iterator();
+
+        while (iterator.hasNext()) {
+            Student student = iterator.next();
+
+            if (student.getEnrollments() > x) {
+                iterator.remove();
+            }
+        }
     }
 
     @Override

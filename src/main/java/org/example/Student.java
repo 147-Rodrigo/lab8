@@ -16,6 +16,12 @@ public class Student {
         this.enrollments = enrollments;
     }
 
+    // Construtor simplificado
+    public Student(String name, int enrollments) {
+        this.name = name;
+        this.enrollments = enrollments;
+    }
+
     public int getNumber() {
         return number;
     }
